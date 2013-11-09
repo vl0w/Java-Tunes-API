@@ -38,7 +38,6 @@ public class MacMusicLibrary implements MusicLibrary {
 			}
 
 		} catch (IOException | ScriptException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

@@ -42,7 +42,6 @@ public class MacScriptHelper {
 	// }
 
 	public List<Long> getAllTrackIds() throws IOException, ScriptException {
-
 		String script = getScript("QueryTrackIDs.applescript");
 		Object result = getEngine().eval(script);
 		return (List<Long>) result;
