@@ -1,6 +1,6 @@
 package net.vl0w.java.itunesapi.main.model;
 
-public enum TrackAttributes {
+public enum TrackAttribute {
 	ID("id"), //
 	NAME("name"), //
 	ARTIST("artist"), //
@@ -11,7 +11,8 @@ public enum TrackAttributes {
 	DISC_NUMBER("disc number"), //
 	DISC_COUNT("disc count"), //
 	TRACK_NUMBER("track number"), YEAR("year"), //
-	BPM("bpm"), DATE_MODIFIED("date modified"), //
+	BPM("bpm"), //
+	DATE_MODIFIED("date modified"), //
 	DATE_ADDED("date added"), //
 	BIT_RATE("bit rate"), //
 	SAMPLE_RATE("sample rate"), //
@@ -23,7 +24,7 @@ public enum TrackAttributes {
 		return attributeIdentifier;
 	}
 
-	private TrackAttributes(String identifier) {
+	private TrackAttribute(String identifier) {
 		this.attributeIdentifier = identifier;
 	}
 }
