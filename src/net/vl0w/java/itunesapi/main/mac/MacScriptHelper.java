@@ -18,32 +18,6 @@ import org.apache.commons.io.IOUtils;
 
 public class MacScriptHelper {
 
-	// @Deprecated
-	// public boolean isTrackInItunes(Track track) throws ScriptException,
-	// IOException {
-	// String script = getScript("QueryTrack.applescript");
-	// script = script.replace("<ARTIST>", track.getArtist());
-	// script = script.replace("<TRACK>", track.getName());
-	//
-	// Object result = getEngine().eval(script);
-	// return !((List<String>) result).isEmpty();
-	// }
-	//
-	// @Deprecated
-	// public void addTrackToItunes(String filePath) throws IOException,
-	// ScriptException {
-	// // TODO Duplicate Code!
-	// String date = new SimpleDateFormat("dd.MM.yyyy").format(new Date());
-	// String playlistName = "\"ShareTunes " + date + "\"";
-	//
-	// String script = getScript("AddTrackToITunes.applescript");
-	// script = script.replaceAll("<PLAYLIST>", playlistName);
-	// script = script.replaceAll("<PATH>", "\"" + filePath + "\"");
-	//
-	// getEngine().eval(script);
-	//
-	// }
-
 	public List<Long> getAllTrackIds() throws IOException, ScriptException {
 		String script = getScript("QueryAllTracks.applescript");
 		Object result = getEngine().eval(script);
@@ -74,12 +48,6 @@ public class MacScriptHelper {
 		String unparsedStringResult = String.valueOf(result);
 		return unparsedStringResult.substring(1,
 				unparsedStringResult.length() - 1);
-		// ConditionBuilder conditionBuilder = new ConditionBuilder();
-		// conditionBuilder.attribute(TrackAttribute.ID).is(
-		// String.valueOf(trackId));
-		//
-		// Track queriedTrack = queryTracksByCondition(conditionBuilder).get(0);
-		// return queriedTrack.getAttribute(attribute);
 	}
 
 	private String getScript(String scriptName) throws IOException {
