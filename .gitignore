@@ -9,3 +9,4 @@ target/
 bin/
 .sonar/
 .settings/
+src_test/net/vl0w/java/itunesapi/main/SandboxTest.java
